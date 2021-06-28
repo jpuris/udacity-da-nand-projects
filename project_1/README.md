@@ -106,4 +106,4 @@ Please see [sql/5_challanges.sql]("sql/5_challanges.sql")
 
 ## Disclaimer and Usage
 
-Please read [Udacity Honor Code](https://udacity.zendesk.com/hc/en-us/articles/210667103-What-is-the-Udacity-Honor-Code-) as well as [rules on collaboration](https://udacity.zendesk.com/hc/en-us/articles/207694806-What-are-the-rules-on-collaboration-)
+Please read [Udacity Honor Code](https://udacity.zendesk.com/hc/en-us/articles/210667103-What-is-the-Udacity-Honor-Code-), [rules on collaboration](https://udacity.zendesk.com/hc/en-us/articles/207694806-What-are-the-rules-on-collaboration-) and [plagiarism](https://udacity.zendesk.com/hc/en-us/sections/360000345231-Plagiarism)
