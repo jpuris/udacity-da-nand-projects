@@ -104,6 +104,45 @@ Please see [sql/4_crud.sql]("sql/4_crud.sql")
 
 Please see [sql/5_challanges.sql]("sql/5_challanges.sql")
 
+## How to run me
+
+### Requirements
+- Docker
+- Linux or MacOS
+- psql (Postgres official CLI)
+
+### Clone the repository
+```zsh
+git clone https://github.com/jpuris/udacity-da-nand-projects.git
+cd udacity-da-nand-projects/project_1
+```
+
+### Init DB
+
+```zsh
+docker run -p 127.0.0.1:5432:5432 -v $(pwd)/hr-dataset/:/tmp/hr-dataset/ --name udacity_da_nand_project_1 -e POSTGRES_PASSWORD=postgres postgres
+```
+
+### Run the Schema creation and ETL
+```zsh
+# Schema
+psql postgresql://postgres:postgres@127.0.0.1:5432/postgres < sql/1_create_schema.sql
+
+# Extract and Load data from the flat file
+psql postgresql://postgres:postgres@127.0.0.1:5432/postgres < sql/2_load_stage.sql
+
+# Run the ETL
+psql postgresql://postgres:postgres@127.0.0.1:5432/postgres < sql/3_sql_etl.sql
+
+# Optional
+# Run the CRUD commands
+psql postgresql://postgres:postgres@127.0.0.1:5432/postgres < sql/4_crud.sql
+
+# Optional
+# Run the challanges
+psql postgresql://postgres:postgres@127.0.0.1:5432/postgres < sql/5_challanges.sql
+```
+
 ## Disclaimer and Usage
 
 Please read [Udacity Honor Code](https://udacity.zendesk.com/hc/en-us/articles/210667103-What-is-the-Udacity-Honor-Code-), [rules on collaboration](https://udacity.zendesk.com/hc/en-us/articles/207694806-What-are-the-rules-on-collaboration-) and [plagiarism](https://udacity.zendesk.com/hc/en-us/sections/360000345231-Plagiarism)
