@@ -27,7 +27,7 @@ hire date, start date, end date, work location, and salary.
 ## Data Architecture Foundations
 
 > Hi,
-> 
+>
 > Welcome to Tech ABC Corp. We are excited to have some new talent onboard. As you may already know, Tech ABC Corp has recently experienced a lot of growth. Our AI powered video game console WOPR has been hugely successful and as a result, our company has grown from 10 employees to 200 in only 6 months (and we are projecting a 20% growth a year for the next 5 years). We have also grown from our Dallas, Texas office, to 4 other locations nationwide: New York City, NY, San Francisco, CA, Minneapolis, MN, and Nashville, TN.
 >
 > While this growth is great, it is really starting to put a strain on our record keeping in HR. We currently maintain all employee information on a shared spreadsheet. When HR consisted of only myself, managing everyone on an Excel spreadsheet was simple, but now that it is a shared document I am having serious reservations about data integrity and data security. If the wrong person got their hands on the HR file, they would see the salaries of every employee in the company, all the way up to the president.
@@ -43,7 +43,6 @@ hire date, start date, end date, work location, and salary.
 > Thanks,
 > Sarah Collins
 > Head of HR
-
 
 ### Data Architect Business Requirement
 
@@ -107,11 +106,13 @@ Please see [sql/5_challanges.sql]("sql/5_challanges.sql")
 ## How to run me
 
 ### Requirements
+
 - Docker
 - Linux or MacOS
 - psql (Postgres official CLI)
 
 ### Clone the repository
+
 ```zsh
 git clone https://github.com/jpuris/udacity-da-nand-projects.git
 cd udacity-da-nand-projects/project_1
@@ -124,6 +125,7 @@ docker run -p 127.0.0.1:5432:5432 -v $(pwd)/hr-dataset/:/tmp/hr-dataset/ --name 
 ```
 
 ### Run the Schema creation and ETL
+
 ```zsh
 # Schema
 psql postgresql://postgres:postgres@127.0.0.1:5432/postgres < sql/1_create_schema.sql
